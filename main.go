@@ -1,9 +1,12 @@
 package main
 
 import (
-	"fmt"
+	"net/http"
+
+	"github.com/dancarlocanlas/go-getting-started/controllers"
 )
 
 func main() {
-	fmt.Println("Hello world demo")
+	controllers.RegisterControllers()
+	http.ListenAndServe(":3000", nil)
 }
